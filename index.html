@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E - Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4e860c3dd1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="items">
+                <ul class="list">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="mainContainer">
+        <div class="allItemContainer">
+            <h2>Cart (2 Itmes)</h2>
+
+            <div class="itemContainer">
+                <div class="imgContainer">
+                    <img src="https://static.zara.net/photos///2021/I/0/1/p/8669/730/446/2/w/1920/8669730446_6_1_1.jpg?ts=1631029997949"
+                        alt="tshirt_img" width="200px" height="250px">
+                </div>
+                <!-- Right side of itemContainer -->
+                <div class="rightSide">
+                    <div class="rightUpperSide">
+                        <div class="productDetail">
+                            <h3>Blue Zara Shirt</h3>
+                            <p>SHIRT BLUE</p>
+                            <p>COLOUR - BLUE</p>
+                            <p>SIZE - M</p>
+                        </div>
+
+                        <div class="quantityContainer">
+                            <button class="decreaseQuantity qu1 hover" onclick="decQuantity('qt1','itemPr1')"><i
+                                    class="fas fa-minus"></i></button>
+                            <input type="text" id="qt1" class="quantity qu1" value="0">
+                            <button class="decreaseQuantity qu1 hover" onclick="incQuantity('qt1','itemPr1')"><i
+                                    class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="rightDownSide">
+                        <div class="removeAndWishlist">
+                            <i class="fas fa-trash"></i>
+                            <p> REMOVE ITEM</p>
+                            <i class="fas fa-heart"></i>
+                            <p> ADD TO WISHLIST</p>
+                        </div>
+                        <div class="price">
+                            <p style="font-weight: bold;">$<span id="itemPr1" style="font-weight: bold;">0.00</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <!-- Second Container Start -->
+            <div class="itemContainer">
+                <div class="imgContainer">
+                    <img src="https://static.zara.net/photos///2021/I/0/1/p/8275/255/500/2/w/1920/8275255500_6_1_1.jpg?ts=1629806999694"
+                        alt="tshirt_img" width="200px" height="250px">
+                </div>
+                <!-- Right side of itemContainer -->
+                <div class="rightSide">
+                    <div class="rightUpperSide">
+                        <div class="productDetail">
+                            <h3>Green Zara Shirt</h3>
+                            <p>SHIRT GREEN</p>
+                            <p>COLOUR - GREEN</p>
+                            <p>SIZE - M</p>
+                        </div>
+
+                        <div class="quantityContainer">
+                            <button class="decreaseQuantity qu1 hover" onclick="decQuantity('qt2','itemPr2')"><i
+                                    class="fas fa-minus"></i></button>
+                            <input type="text" id="qt2" class="quantity qu1" value="0">
+                            <button class="decreaseQuantity qu1 hover" onclick="incQuantity('qt2','itemPr2')"><i
+                                    class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="rightDownSide">
+                        <div class="removeAndWishlist">
+                            <i class="fas fa-trash"></i>
+                            <p> REMOVE ITEM</p>
+                            <i class="fas fa-heart"></i>
+                            <p> ADD TO WISHLIST</p>
+                        </div>
+                        <div class="price">
+                            <p style="font-weight: bold;">$<span id="itemPr2" style="font-weight: bold;">0.00</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right Side of Main Container -->
+        <div class="rightMain">
+            <div class="totalContainer">
+                <h3>The Total Amount Of</h3>
+                <div class="productTotalAmount">
+                    <div class="productTotal">
+                        <p>Product Amount</p>
+                        <p>$<span id="totalPrice">0.00</span></p>
+                    </div>
+                    <div class="shippingCharges">
+                        <p>Shipping Charges</p>
+                        <p>$50.00</p>
+                    </div>
+                    <hr>
+                    <div class="totalAmount">
+                        <p>The Total Amount Of (Including VAT)</p>
+                        <p>$<span id="totalAmt">50.00</span></p>
+                    </div>
+                    <button class="checkout">CHECKOUT</button>
+                </div>
+            </div>
+            <div class="discountContainer">
+                <h4>Add a Discount Coupon (Optional)</h4>
+                <input id="disCode" type="text" placeholder="COUPON">
+                <P id="errorthr">Code is 123</P>
+                <button class="applyDiscount" onclick="discountCode()">Apply
+                </button>
+            </div>
+            <div class="deliveryDateContainer">
+                <h3>Expected Delivery Date</h3>
+                <p>july 27th 2022 - july 29th 2022</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
